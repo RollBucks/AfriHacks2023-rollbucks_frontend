@@ -9,8 +9,8 @@ export const Nav = () => {
             <li><a href='/#home' className='hover:text-blue-300'>Home</a></li>
             <li><a href='/#about' className='hover:text-blue-300'>About</a></li>
             <li><a href='/#features' className='hover:text-blue-300'>Features</a></li>
-            <li><a href='/#faq' className='hover:text-blue-300'>FAQ</a></li>
-            <li><a href='/#contact' className='hover:text-blue-300'>Contact</a></li>
+            {/* <li><a href='/#faq' className='hover:text-blue-300'>FAQ</a></li>
+            <li><a href='/#contact' className='hover:text-blue-300'>Contact</a></li> */}
         </ul>
 
         <span className='space-x-2'>
