@@ -1,6 +1,7 @@
 {
   "name": "afrihacks2023-rollbucks-frontend",
   "private": true,
+  "homepage": "https://rollbucks.github.io/AfriHacks2023-rollbucks_frontend/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
