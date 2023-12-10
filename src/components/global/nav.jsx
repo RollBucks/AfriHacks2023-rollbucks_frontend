@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 import logo from '../../assets/icons/logo.svg';
 
 export const Nav = () => {
-    const desktopMenu = <nav className='font-body flex items-center justify-between px-[32px] py-[14px] border-b-[2px] border-white-500 bg-white-400 z-[1000] fixed w-full'>
+    const desktopMenu = <nav className='font-body flex items-center text-sm justify-between px-[32px] py-[20px] border-b-[2px] border-white-500 bg-white-400 z-[1000] fixed w-full'>
         <img src={logo} alt='logo icon' width={'102px'} />
 
-        <ul className='flex items-center gap-8'>
+        <ul className='flex items-center gap-8 pl-10'>
             <li><a href='/#home' className='hover:text-blue-300'>Home</a></li>
             <li><a href='/#about' className='hover:text-blue-300'>About</a></li>
             <li><a href='/#features' className='hover:text-blue-300'>Features</a></li>
