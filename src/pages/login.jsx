@@ -12,7 +12,7 @@ export const Login = () => {
 
                     <img src={logo} alt="Rollbucks Logo" className="w-24 self-center" />
 
-                    <Separator y={10} />
+                    <div className="my-12"></div>
 
                     {/* Form Header */}
                     <div>
@@ -20,11 +20,11 @@ export const Login = () => {
                             <h2 className="text-3xl font-display font-semibold">Hey, Welcome Back! </h2>
                             <span className="text-4xl">👋</span>
                         </div>
-                        <Separator y={1.5} />
+                        <div className="my-1.5"></div>
                         <p>Enter your details to gain access to your account.</p>
                     </div>
 
-                    <Separator y={8} />
+                    <div className="my-6"></div>
 
                     <input
                         type="text"
@@ -32,15 +32,18 @@ export const Login = () => {
                         className="px-4 py-3 rounded-md text-sm font-body bg-white-500 shadow-sm border border-white-600"
                         onChange={(event) => setEmail(event.target.value)}
                     />
-                    <Separator y={3} />
+
+                    <div className="my-2"></div>
+
                     <input
                         type="password"
                         placeholder="Password"
-                        className="px-4 py-3  rounded-md bg-slate-100 text-sm font-body bg-white-500 shadow-sm border border-white-600"
+                        className="px-4 py-3 rounded-md bg-slate-100 text-sm font-body bg-white-500 shadow-sm border border-white-600"
                         onChange={(event) => setPassword(event.target.value)}
                     />
-                    {/* <div className="my-1.5"></div> */}
-                    <Separator y={5} />
+
+                    <div className="my-7"></div>
+
                     <input
                         onClick={() => { }}
                         type="submit"
