@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+    scroll-margin: 100px;
+}
+
 h1 {
     font-family: 'Space Grotesk';
 }
