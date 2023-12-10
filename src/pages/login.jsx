@@ -6,7 +6,7 @@ export const Login = () => {
         // <h1 className="">Login</h1>
         // </div>
 
-        <div className="h-screen flex flex-col items-center bg-white-500">
+        <div className="h-screen flex flex-col items-center bg-white-400">
             <div className="flex flex-col justify-center p-9 w-md">
                 <form method="POST" className="flex flex-col w-sm">
 
