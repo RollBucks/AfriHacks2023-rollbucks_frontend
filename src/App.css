@@ -10,3 +10,10 @@ html {
 h1 {
     font-family: 'Space Grotesk';
 }
+
+@media (hover: none) {
+    .feature-card {
+        background-color: #22262B !important;
+        color: #B2C2EC !important;
+    }
+}
