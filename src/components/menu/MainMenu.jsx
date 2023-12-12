@@ -19,6 +19,8 @@ import {
   MdOutlineCardTravel,
   MdOutlineLightbulb,
   MdOutlineSettings,
+  MdAddCircleOutline,
+  MdEdit,
 } from "react-icons/md";
 
 export default function Banner(props) {
@@ -79,7 +81,7 @@ export default function Banner(props) {
         boxShadow={bgShadow}
         borderRadius='20px'
         p='15px'>
-        <MenuItem
+        {/* <MenuItem
           transition='0.2s linear'
           color={textColor}
           _hover={textHover}
@@ -138,6 +140,25 @@ export default function Banner(props) {
               Panel 3
             </Text>
           </Flex>
+        </MenuItem> */}
+        <MenuItem
+          transition='0.2s linear'
+          color={textColor}
+          _hover={textHover}
+          p='0px'
+          borderRadius='8px'
+          _active={{
+            bg: "transparent",
+          }}
+          _focus={{
+            bg: "transparent",
+          }}>
+          <Flex align='center'>
+            <Icon as={MdAddCircleOutline} h='16px' w='16px' me='8px' />
+            <Text fontSize='sm' fontWeight='400'>
+              New Contract
+            </Text>
+          </Flex>
         </MenuItem>
         <MenuItem
           transition='0.2s linear'
@@ -152,9 +173,9 @@ export default function Banner(props) {
             bg: "transparent",
           }}>
           <Flex align='center'>
-            <Icon as={MdOutlineSettings} h='16px' w='16px' me='8px' />
+            <Icon as={MdEdit} h='16px' w='16px' me='8px' />
             <Text fontSize='sm' fontWeight='400'>
-              Panel 4
+              Edit Contract
             </Text>
           </Flex>
         </MenuItem>

@@ -65,11 +65,10 @@ export default function ColumnsTable(props) {
           fontSize='22px'
           fontWeight='700'
           lineHeight='100%'>
-          Complex Table
+          Recent Receipts
         </Text>
-        <Menu />
       </Flex>
-      <Table {...getTableProps()} variant='simple' color='gray.500' mb='24px'>
+      <Table {...getTableProps()} variant='simple' color='brand.500' mb='24px'>
         <Thead>
           {headerGroups.map((headerGroup, index) => (
             <Tr {...headerGroup.getHeaderGroupProps()} key={index}>
@@ -113,11 +112,11 @@ export default function ColumnsTable(props) {
                           me='5px'
                           color={
                             cell.value === "Approved"
-                              ? "green.500"
+                              ? "brand.500"
                               : cell.value === "Disable"
                                 ? "red.500"
                                 : cell.value === "Error"
-                                  ? "orange.500"
+                                  ? "red.500"
                                   : null
                           }
                           as={
@@ -140,18 +139,6 @@ export default function ColumnsTable(props) {
                       <Text color={textColor} fontSize='sm' fontWeight='700'>
                         {cell.value}
                       </Text>
-                    );
-                  } else if (cell.column.Header === "PROGRESS") {
-                    data = (
-                      <Flex align='center'>
-                        <Progress
-                          variant='table'
-                          colorScheme='brandScheme'
-                          h='8px'
-                          w='108px'
-                          value={cell.value}
-                        />
-                      </Flex>
                     );
                   }
                   return (

@@ -1,26 +1,26 @@
 [
   {
-    "name":"Horizon UI PRO",
+    "name": "Jerad Smith",
     "status": "Approved",
     "date": "18 Apr 2022",
-    "progress": 75.5  
+    "progress": 75.5
   },
   {
-    "name":"Horizon UI Free",
-    "status": "Disable",
+    "name": "Tony Hawk",
+    "status": "Approved",
     "date": "18 Apr 2022",
-    "progress": 25.5  
+    "progress": 25.5
   },
   {
-    "name":"Marketplace",
+    "name": "John Doe",
     "status": "Error",
     "date": "20 May 2021",
-    "progress": 90  
+    "progress": 90
   },
   {
-    "name":"Weekly Updates",
+    "name": "Panagram Studios",
     "status": "Approved",
     "date": "12 Jul 2021",
-    "progress": 50.5  
+    "progress": 50.5
   }
 ]

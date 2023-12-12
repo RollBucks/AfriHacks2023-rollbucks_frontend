@@ -6,7 +6,7 @@ export const globalStyles = {
       200: "#422AFB",
       300: "#422AFB",
       400: "#7551FF",
-      500: "#422AFB",
+      500: "#22262B",
       600: "#3311DB",
       700: "#02044A",
       800: "#190793",
@@ -37,7 +37,7 @@ export const globalStyles = {
     secondaryGray: {
       100: "#E0E5F2",
       200: "#E1E9F8",
-      300: "#F4F7FE",
+      300: "#EAEAEA",
       400: "#E9EDF7",
       500: "#8F9BBA",
       600: "#A3AED0",
@@ -72,7 +72,7 @@ export const globalStyles = {
       600: "#24388a",
       700: "#1B254B",
       800: "#111c44",
-      900: "#0b1437",
+      900: "#22262B",
     },
     gray: {
       100: "#FAFCFE",
@@ -83,14 +83,14 @@ export const globalStyles = {
       body: {
         overflowX: "hidden",
         bg: mode("secondaryGray.300", "navy.900")(props),
-        fontFamily: "DM Sans",
+        fontFamily: "Space Grotesk",
         letterSpacing: "-0.5px",
       },
       input: {
         color: "gray.700",
       },
       html: {
-        fontFamily: "DM Sans",
+        fontFamily: "Space Grotesk",
       },
     }),
   },

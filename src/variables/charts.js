@@ -2,7 +2,7 @@
 
 export const barChartDataDailyTraffic = [
   {
-    name: "Daily Traffic",
+    name: "Monthly Expenses",
     data: [20, 30, 40, 20, 45, 50, 30],
   },
 ];
@@ -32,7 +32,7 @@ export const barChartOptionsDailyTraffic = {
     labels: {
       show: true,
       style: {
-        colors: "#A3AED0",
+        colors: "#22262B",
         fontSize: "14px",
         fontWeight: "500",
       },
@@ -50,7 +50,7 @@ export const barChartOptionsDailyTraffic = {
     labels: {
       show: true,
       style: {
-        colors: "#CBD5E0",
+        colors: "#22262B",
         fontSize: "14px",
       },
     },
@@ -80,12 +80,17 @@ export const barChartOptionsDailyTraffic = {
         [
           {
             offset: 0,
-            color: "#4318FF",
+            color: "#FFDB63",
             opacity: 1,
           },
           {
+            offset: 50,
+            color: "#F3D0BB",
+            opacity: 0.4,
+          },
+          {
             offset: 100,
-            color: "rgba(67, 24, 255, 1)",
+            color: "#B2C2EC",
             opacity: 0.28,
           },
         ],
@@ -146,7 +151,7 @@ export const barChartOptionsConsumption = {
     labels: {
       show: true,
       style: {
-        colors: "#A3AED0",
+        colors: "#22262B",
         fontSize: "14px",
         fontWeight: "500",
       },
@@ -164,7 +169,7 @@ export const barChartOptionsConsumption = {
     labels: {
       show: false,
       style: {
-        colors: "#A3AED0",
+        colors: "#22262B",
         fontSize: "14px",
         fontWeight: "500",
       },
@@ -191,12 +196,12 @@ export const barChartOptionsConsumption = {
   },
   fill: {
     type: "solid",
-    colors: ["#5E37FF", "#6AD2FF", "#E1E9F8"],
+    colors: ["#22262B", "#B2C2EC", "#E1E9F8"],
   },
   legend: {
     show: false,
   },
-  colors: ["#5E37FF", "#6AD2FF", "#E1E9F8"],
+  colors: ["#22262B", "#B2C2EC", "#E1E9F8"],
   dataLabels: {
     enabled: false,
   },
@@ -210,7 +215,7 @@ export const barChartOptionsConsumption = {
 
 export const pieChartOptions = {
   labels: ["Your files", "System", "Empty"],
-  colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
+  colors: ["#22262B", "#FFDB63", "#fff"],
   chart: {
     width: "50px",
   },

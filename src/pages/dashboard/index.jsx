@@ -1,31 +1,6 @@
-/*!
-  _   _  ___  ____  ___ ________  _   _   _   _ ___   
- | | | |/ _ \|  _ \|_ _|__  / _ \| \ | | | | | |_ _| 
- | |_| | | | | |_) || |  / / | | |  \| | | | | || | 
- |  _  | |_| |  _ < | | / /| |_| | |\  | | |_| || |
- |_| |_|\___/|_| \_\___/____\___/|_| \_|  \___/|___|
-                                                                                                                                                                                                                                                                                                                                       
-=========================================================
-* Horizon UI - v1.1.0
-=========================================================
-
-* Product Page: https://www.horizon-ui.com/
-* Copyright 2023 Horizon UI (https://www.horizon-ui.com/)
-
-* Designed and Coded by Simmmple
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-
-// Chakra imports
 import {
     Avatar,
     Box,
-    Flex,
-    FormLabel,
     Icon,
     Select,
     SimpleGrid,
@@ -34,7 +9,6 @@ import {
 // Assets
 import Usa from "../../assets/img/dashboards/usa.png";
 // Custom components
-import MiniCalendar from "../../components/calendar/MiniCalendar";
 import MiniStatistics from "../../components/card/MiniStatistics";
 import IconBox from "../../components/icons/IconBox";
 import React from "react";
@@ -43,14 +17,11 @@ import {
     MdAttachMoney,
     MdBarChart,
     MdFileCopy,
+    MdLogout
 } from "react-icons/md";
 import CheckTable from "./components/CheckTable";
 import ComplexTable from "./components/ComplexTable";
 import DailyTraffic from "./components/DailyTraffic";
-import PieCard from "./components/PieCard";
-import Tasks from "./components/Tasks";
-import TotalSpent from "./components/TotalSpent";
-import WeeklyRevenue from "./components/WeeklyRevenue";
 import {
     columnsDataCheck,
     columnsDataComplex,
@@ -58,115 +29,69 @@ import {
 import tableDataCheck from "./variables/tableDataCheck.json";
 import tableDataComplex from "./variables/tableDataComplex.json";
 
+import logo from '../../assets/icons/logo.svg'
+
 export default function Dashboard() {
     // Chakra Color Mode
     const brandColor = useColorModeValue("brand.500", "white");
     const boxBg = useColorModeValue("secondaryGray.300", "whiteAlpha.100");
     return (
-        <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
-            <SimpleGrid
-                columns={{ base: 1, md: 2, lg: 3, "2xl": 6 }}
-                gap='20px'
-                mb='20px'>
-                <MiniStatistics
-                    startContent={
-                        <IconBox
-                            w='56px'
-                            h='56px'
-                            bg={boxBg}
-                            icon={
-                                <Icon w='32px' h='32px' as={MdBarChart} color={brandColor} />
-                            }
-                        />
-                    }
-                    name='Earnings'
-                    value='$350.4'
-                />
-                <MiniStatistics
-                    startContent={
-                        <IconBox
-                            w='56px'
-                            h='56px'
-                            bg={boxBg}
-                            icon={
-                                <Icon w='32px' h='32px' as={MdAttachMoney} color={brandColor} />
-                            }
-                        />
-                    }
-                    name='Spend this month'
-                    value='$642.39'
-                />
-                <MiniStatistics growth='+23%' name='Sales' value='$574.34' />
-                <MiniStatistics
-                    endContent={
-                        <Flex me='-16px' mt='10px'>
-                            <FormLabel htmlFor='balance'>
-                                <Avatar src={Usa} />
-                            </FormLabel>
-                            <Select
-                                id='balance'
-                                variant='mini'
-                                mt='5px'
-                                me='0px'
-                                defaultValue='usd'>
-                                <option value='usd'>USD</option>
-                                <option value='eur'>EUR</option>
-                                <option value='gba'>GBA</option>
-                            </Select>
-                        </Flex>
-                    }
-                    name='Your balance'
-                    value='$1,000'
-                />
-                <MiniStatistics
-                    startContent={
-                        <IconBox
-                            w='56px'
-                            h='56px'
-                            bg='linear-gradient(90deg, #4481EB 0%, #04BEFE 100%)'
-                            icon={<Icon w='28px' h='28px' as={MdAddTask} color='white' />}
-                        />
-                    }
-                    name='New Tasks'
-                    value='154'
-                />
-                <MiniStatistics
-                    startContent={
-                        <IconBox
-                            w='56px'
-                            h='56px'
-                            bg={boxBg}
-                            icon={
-                                <Icon w='32px' h='32px' as={MdFileCopy} color={brandColor} />
-                            }
-                        />
-                    }
-                    name='Total Projects'
-                    value='2935'
-                />
-            </SimpleGrid>
-
-            <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px' mb='20px'>
-                <TotalSpent />
-                <WeeklyRevenue />
-            </SimpleGrid>
-            <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
-                <CheckTable columnsData={columnsDataCheck} tableData={tableDataCheck} />
-                <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px'>
+        <div>
+            <nav className='font-body flex items-center text-sm justify-between px-[32px] py-[20px] border-b-[2px] border-white-500 bg-white-400 z-[1000] fixed w-full'>
+                <img src={logo} alt='logo icon' width={'102px'} />
+                <div className='flex items-center space-x-4'>
+                    <p className='text-black-400'>Ofure Ehiremhen</p>
+                    <Avatar size='sm' />
+                    <Icon as={MdLogout} color={brandColor} w='24px' h='24px' />
+                </div>
+            </nav>
+            <h1 className="pt-[100px] px-40 text-3xl font-bold ">Welcome back, Ofure! <span className="text-4xl">👋</span></h1>
+            <p className="px-40 pt-[10px] text-lg font-light font-body text-gray-500">Here's what's up with your contracts today.</p>
+            <Box pt={{ base: "130px", md: "80px", xl: "80px" }} className="px-40">
+                <SimpleGrid
+                    columns={{ base: 1, md: 2, lg: 2, "2xl": 6 }}
+                    gap='20px'
+                    mb='20px'>
+                    <MiniStatistics
+                        startContent={
+                            <IconBox
+                                w='56px'
+                                h='56px'
+                                bg={boxBg}
+                                icon={
+                                    <Icon w='32px' h='32px' as={MdAttachMoney} color={brandColor} />
+                                }
+                            />
+                        }
+                        name='Monthly Expenses'
+                        value='$10,420.39'
+                    />
+                    <MiniStatistics
+                        startContent={
+                            <IconBox
+                                w='56px'
+                                h='56px'
+                                bg={boxBg}
+                                icon={
+                                    <Icon w='32px' h='32px' as={MdFileCopy} color={brandColor} />
+                                }
+                            />
+                        }
+                        name='Total Open Contracts'
+                        value='5'
+                    />
+                </SimpleGrid>
+                <SimpleGrid columns={{ base: 1, md: 1, xl: 1 }} gap='20px' mb='20px'>
+                    <CheckTable columnsData={columnsDataCheck} tableData={tableDataCheck} />
+                </SimpleGrid>
+                <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
                     <DailyTraffic />
-                    <PieCard />
+                    <ComplexTable
+                        columnsData={columnsDataComplex}
+                        tableData={tableDataComplex}
+                    />
                 </SimpleGrid>
-            </SimpleGrid>
-            <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
-                <ComplexTable
-                    columnsData={columnsDataComplex}
-                    tableData={tableDataComplex}
-                />
-                <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px'>
-                    <Tasks />
-                    <MiniCalendar h='100%' minW='100%' selectRange={false} />
-                </SimpleGrid>
-            </SimpleGrid>
-        </Box>
+            </Box>
+        </div>
     );
 }
