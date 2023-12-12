@@ -1,58 +1,67 @@
 import logo from '../assets/icons/logo.svg';
+import grid from '../assets/loginGrid.svg';
+import arrows from '../assets/arrows.svg';
+import { useMediaQuery } from '../hooks/useMediaQuery';
 
 export const Login = () => {
+    let isMobile = useMediaQuery("(max-width: 1024px)");
     return (
-        // <div className="h-screen flex items-center justify-center">
-        // <h1 className="">Login</h1>
-        // </div>
+        <section className='flex h-screen w-full overflow-hidden text-black-400'>
 
-        <div className="h-screen flex flex-col items-center bg-white-400">
-            <div className="flex flex-col justify-center p-9 w-md">
-                <form method="POST" className="flex flex-col w-sm">
+            {!isMobile ? <div className="h-full w-2/5 flex items-center justify-center bg-gradient-to-br from-[#F4DDAC] via-[#EEDEE0] to-blue relative">
+                <h1 className="z-[2] text-3xl lg:text-[92px] font-display font-bold lg:leading-[92px]">Seamless <br /> Payments, <br /> Global <br /> Exposure</h1>
+                <img src={grid} alt="Login Grid" className="absolute top-0 right-0" />
+                <img src={arrows} alt="Arrows" className="absolute bottom-0 right-0 w-[40%]" />
+            </div> : null}
 
-                    <img src={logo} alt="Rollbucks Logo" className="w-24 self-center" />
+            <div className="h-screen flex flex-col items-center bg-white-400 w-full xl:w-3/5">
+                <div className="flex flex-col justify-center p-9 w-md">
+                    <form method="POST" className="flex flex-col w-sm">
 
-                    <div className="my-12"></div>
+                        <img src={logo} alt="Rollbucks Logo" className="w-24 self-center" />
 
-                    {/* Form Header */}
-                    <div>
-                        <div className="flex items-center">
-                            <h2 className="text-3xl font-display font-semibold">Hey, Welcome Back! </h2>
-                            <span className="text-4xl">👋</span>
+                        <div className="my-12"></div>
+
+                        {/* Form Header */}
+                        <div>
+                            <div className="flex items-center">
+                                <h2 className="text-3xl font-display font-semibold">Hey, Welcome Back! </h2>
+                                <span className="text-4xl">👋</span>
+                            </div>
+                            <div className="my-1.5"></div>
+                            <p>Enter your details to gain access to your account.</p>
                         </div>
-                        <div className="my-1.5"></div>
-                        <p>Enter your details to gain access to your account.</p>
-                    </div>
 
-                    <div className="my-6"></div>
+                        <div className="my-6"></div>
 
-                    <input
-                        type="text"
-                        placeholder="Email"
-                        className="px-4 py-3 rounded-md text-sm font-body bg-white-500 shadow-sm border border-white-600"
-                        onChange={(event) => setEmail(event.target.value)}
-                    />
+                        <input
+                            type="text"
+                            placeholder="Email"
+                            className="px-4 py-3 rounded-md text-sm font-body bg-white-500 shadow-sm border border-white-600"
+                            onChange={(event) => setEmail(event.target.value)}
+                        />
 
-                    <div className="my-2"></div>
+                        <div className="my-2"></div>
 
-                    <input
-                        type="password"
-                        placeholder="Password"
-                        className="px-4 py-3 rounded-md bg-slate-100 text-sm font-body bg-white-500 shadow-sm border border-white-600"
-                        onChange={(event) => setPassword(event.target.value)}
-                    />
+                        <input
+                            type="password"
+                            placeholder="Password"
+                            className="px-4 py-3 rounded-md bg-slate-100 text-sm font-body bg-white-500 shadow-sm border border-white-600"
+                            onChange={(event) => setPassword(event.target.value)}
+                        />
 
-                    <div className="my-7"></div>
+                        <div className="my-7"></div>
 
-                    <input
-                        onClick={() => { }}
-                        type="submit"
-                        value="Submit"
-                        className="mt-2 p-4 rounded-md font-display text-sm text-white-400 bg-black-400"
-                    />
-                </form>
+                        <input
+                            onClick={() => { }}
+                            type="submit"
+                            value="Submit"
+                            className="mt-2 p-4 rounded-md font-display text-sm text-white-400 bg-black-400"
+                        />
+                    </form>
+                </div>
             </div>
-        </div>
+        </section>
     )
 }
 
