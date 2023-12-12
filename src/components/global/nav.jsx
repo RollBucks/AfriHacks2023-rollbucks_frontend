@@ -18,6 +18,7 @@ export const Nav = () => {
             <li className='hover:underline'><a href='/#home' className='hover:text-blue-300'>Home</a></li>
             <li className='hover:underline'><a href='/#about' className='hover:text-blue-300'>About</a></li>
             <li className='hover:underline'><a href='/#features' className='hover:text-blue-300'>Features</a></li>
+            <li className='hover:underline'><Link to='/dashboard' className='hover:text-blue-300'>Dashboard</Link></li>
             {/* <li><a href='/#faq' className='hover:text-blue-300'>FAQ</a></li>
             <li><a href='/#contact' className='hover:text-blue-300'>Contact</a></li> */}
         </ul>
